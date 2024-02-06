@@ -1,0 +1,29 @@
+{
+  "name": "paguinaweb_proyecto_4",
+  "version": "1.0.0",
+  "description": "Proyecto con GULP, SASS y HTML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniels36999/PaguinaWeb_Proyecto_4.git"
+  },
+  "keywords": [
+    "SASS",
+    "GULP",
+    "HTML"
+  ],
+  "author": "Daniel Yautibug",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniels36999/PaguinaWeb_Proyecto_4/issues"
+  },
+  "homepage": "https://github.com/daniels36999/PaguinaWeb_Proyecto_4#readme",
+  "devDependencies": {
+    "sass": "^1.70.0"
+  }
+}
+
+
