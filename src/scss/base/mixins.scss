@@ -1,0 +1,19 @@
+@use 'variables' as var;
+
+@mixin tablet {
+    @media (min-width: var.$dim_tablet){
+        @content;
+    }
+}
+
+@mixin telefono {
+    @media (min-width: var.$dim_telefono){
+        @content;
+    }
+}
+
+@mixin grid($columnas, $espaciado){
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $espaciado;
+}

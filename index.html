@@ -5,14 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="preload" href="/css/normalize.css" as="style"> 
-    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
 
-    <link rel="preload" href="/css/style.css" as="style"> 
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preload" href="/build/css/app.css" as="style"> 
+    <link rel="stylesheet" href="/build/css/app.css">
 
 </head>
 <body>
+
+    <header class="header">
+        <div class="contenedor contenido-header">
+            <h1>Music Festival - Ecuador</h1>
+            <nav class="navegacion-principal">
+                <a href="#">Line Up</a>
+                <a href="#">Galería</a>
+                <a href="#">Boletos</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="video">
+        <div class="overlay">
+            <div class="contenedor contenido-video">
+                <h2>Concierto Daniels | DX</h2>
+                <p>enero 2029, Guamote, Ecuador</p>
+            </div>
+        </div>
+        <video autoplay muted loop>
+            <source src="video/concierto.mp4" type="video/mp4">
+            <source src="video/concierto.ogg" type="video/ogg">
+            <source src="video/concierto.webm" type="video/webm">
+        </video>
+    </div>
+
+    <section class="festival">
+        <div class="contenedor sobre-festival">
+            <div class="imagen">
+                <img src="/img/imagen_vocalista.jpg" alt="Imagen Festival">
+            </div>
+            <div class="contenido-festival">
+                <h2>Performance Concert</h2>
+                <p class="fecha">14 de enero del 2050, Guamote Ecuador</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, eveniet pariatur. Iusto esse ipsa nisi iure, velit corrupti recusandae accusamus veniam. Quos maxime nisi labore asperiores fugiat optio, alias praesentium.Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    
     
 </body>
 </html>
+
+<!-- "scripts": {
+    "sass": "sass --watch src/scss:build/css" //PORNER EN EL PACKAGE.JSON
+  }, -->

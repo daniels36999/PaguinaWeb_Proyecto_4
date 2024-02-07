@@ -4,7 +4,9 @@
   "description": "Proyecto con GULP, SASS y HTML",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass src/scss:build/css",
+    "scss": "gulp css",
+    "dev": "gulp dev"
   },
   "repository": {
     "type": "git",
@@ -22,8 +24,9 @@
   },
   "homepage": "https://github.com/daniels36999/PaguinaWeb_Proyecto_4#readme",
   "devDependencies": {
-    "sass": "^1.70.0"
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.70.0",
   }
 }
-
-
