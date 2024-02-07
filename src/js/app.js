@@ -1,3 +1,4 @@
+//CODIGO JS
 document.addEventListener( 'DOMContentLoaded', function(){
     iniciarApp();
 
