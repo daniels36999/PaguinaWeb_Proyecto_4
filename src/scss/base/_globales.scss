@@ -16,6 +16,10 @@ html{
 body{
     font-family: var.$fuente_principal;
     font-size: 1.6rem;
+
+    &.fijar-body{
+        overflow: hidden; //BLOQUEA EL SCROL DEL BODY
+    }
 }
 
 p{
@@ -27,7 +31,7 @@ p{
 .contenedor{
     width: 95%;
     max-width: 150rem;
-    margin-bottom: 0 auto;
+    margin: 0 auto;
 }
 
 a{
@@ -52,6 +56,8 @@ h3{
 
 img{
     max-width: 100%;
+    width: 100%;
+    height: auto;
     display: block;
 }
 
