@@ -1,7 +1,5 @@
 /node_modules
-/src
+/src/img
 
-gulpfile.js
 package-lock.json
-package.json
 

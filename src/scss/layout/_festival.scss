@@ -1,0 +1,41 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
+.festival{
+    display: flex;
+    justify-content: center;
+}
+
+.sobre-festival{
+
+    padding: 5rem 0;
+
+    @include mix.tablet{
+        @include mix.grid(2, 5rem);
+    }
+}
+
+.contenido-festival{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include mix.tablet{
+        margin-top: 0;
+    }
+
+    h2{
+        margin-bottom: 2rem;
+    }
+
+    .fecha{
+        color: var.$rosa;
+        font-weight: 700;
+    }
+
+    p{
+        text-align: justify;
+    }
+
+}

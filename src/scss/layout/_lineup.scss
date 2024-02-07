@@ -1,0 +1,90 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
+.lineup{
+    padding: 5rem 0;
+    background-color: var.$rosa;
+
+    h3, p{
+        text-align: center;
+        color: var.$blanco;
+    }
+    .dia{
+        text-transform: uppercase;
+        margin: 5rem 0;
+    }
+}
+
+
+.escenario-contenedor{
+    margin: 0 auto;
+    @include mix.tablet{
+        @include mix.grid(2, 5rem);
+    }
+
+    p{
+        color: var.$negro;
+    }
+}
+
+.escenario{
+    padding: 3rem;
+    margin-bottom: 5rem;
+
+    @include mix.tablet{
+        margin-bottom: 0rem;
+    }
+
+    .nomre-escenario{
+        &:after{
+            content: '';
+            display: block;
+            width: 20rem;
+            height: 10rem;
+            background-size: 15rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin: 2rem auto 0 auto;
+        
+        }
+    }
+
+}  
+
+.rock .nomre-escenario:after{
+    background-image: url(../img/icono_rock.png);
+}
+
+.edm .nomre-escenario:after{
+    background-image: url(../img/icono_edm.png);
+}
+
+.calendario{
+    @include mix.reset_list;
+
+    li{
+        padding: 2.5rem;
+        font-weight: 700;
+
+        span{
+            font-weight: 400;
+        }
+    }
+}
+
+
+.bg-amarillo{
+    background-color: var.$amarillo;
+
+    li:nth-child(odd){ //ELIGE ALTERNADO--
+        background-color: darken(var.$amarillo, 25%);
+    }
+}
+
+.bg-verde{
+    background-color: var.$verde;
+
+    li:nth-child(odd){ //ELIGE ALTERNADO--
+        background-color: darken(var.$verde, 10%);
+    }
+}
