@@ -14,14 +14,26 @@ const  imagemin = require('gulp-imagemin'); // LIB IMAGENES WEB
 const  webp = require('gulp-webp'); // LIB IMAGENES WEB
 const  avif = require('gulp-avif'); // LIB IMAGENES WEB
 
+//MEJORA EL FINAL DEL CSS
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const postcss = require('gulp-postcss');
+
+const sourcemaps = require('gulp-sourcemaps'); //REFERENCIA - REVERTIR EL EMPAQUETADO
+
+//MEJORARA CODE JAVASCRIPT
+const terser = require('gulp-terser-js');
 
 //FUNCION PARA EJECUTAR SASS
 function css(callback){
 
     src('src/scss/**/*.scss')       //IDENTIFICAR EL ARCHIVO DE SASS - (ACTUALIZA MULTIPLES ARCHIVOS SCSS)
     src('src/scss/app.scss')       //IDENTIFICAR EL ARCHIVO DE SASS - (UN SOLO ARCHIVO SCSS ACTUALIZA)
+        .pipe(sourcemaps.init())
         .pipe(plumber())           //PARA QUE NO SE BLOQUEE SI HAY ERROR
         .pipe(sass())              //DESPUES COMPILAR EL ARCHIVO
+        .pipe(postcss([autoprefixer(), cssnano()]))
+        .pipe(sourcemaps.write('.'))
         .pipe(dest('build/css'));  //ALMACENAR EN EL DISCO
 
     callback(); //INDICA AL GULP QUE FINALIZO
@@ -74,6 +86,9 @@ function convertirAvif(callback){
 function runJava(callback){
 
     src('src/js/**/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(terser())
+    .pipe(sourcemaps.write('.'))
     .pipe(dest('build/js'));
 
     callback();

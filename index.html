@@ -19,9 +19,9 @@
         <div class="contenedor contenido-header">
             <h1>Music Festival - Ecuador</h1>
             <nav class="navegacion-principal">
-                <a href="#">Line Up</a>
-                <a href="#">Galería</a>
-                <a href="#">Boletos</a>
+                <a href="#lineUp">Line Up</a> <!--Metodo 1  -->
+                <a href="#galeria">Galería</a> <!--Metodo 2 -->
+                <a href="#boletos">Boletos</a> <!--Metodo 3 -->
             </nav>
         </div>
     </header>
@@ -57,7 +57,7 @@
         </div>
     </section>
 
-    <section class="lineup">
+    <section id="lineUp" class="lineup">
         <div class="centrar">
             <h3>Line Up</h3>  
 
@@ -167,10 +167,62 @@
         </div>
     </section> <!--  -->
 
-    <section class="galeria contenedor">
+    <section id="galeria" class="galeria contenedor">
         <h3>Galería</h3>
         <ul class="galeria-imagenes"></ul>
     </section>
+
+
+    <Section id="boletos" class="boletos bg-verde">
+        <h3>Boletos</h3>
+
+        <div class="contenedor contenedor-boletos">
+            <div class="basico pase">
+                <p class="nombre-pase">Pase 1 Dia</p>
+                <header class="pase-header">
+                    <p>Incluye</p>
+                </header>
+                <div class="pase-body">
+                    <ul>
+                        <li>Acceso a ambos escenarios</li>
+                        <li>Comida y bebidas</li>
+                        <li>Bebidas gratis</li>
+                        <li>Mochila gratis</li>
+                    </ul>
+                </div>
+                <footer class="pase-footer">
+                    <p>$100</p>
+                </footer>
+            </div>
+            
+        
+
+            <div class="premium pase">
+                <p class="nombre-pase">Pase 2 Dias</p>
+
+                <header class="pase-header">
+                    <p>Incluye</p>
+                </header>
+                <div class="pase-body">
+                    <ul>
+                        <li>Acceso a ambos escenarios</li>
+                        <li>Comida y bebidas</li>
+                        <li>Hospedaje Gratis</li>
+                        <li>Acceso Vip</li>
+                    </ul>
+                </div>
+                <footer class="pase-footer">
+                    <p>$100</p>
+                </footer>
+            </div>
+
+        </div>
+    </Section>
+
+    <footer class="site-footer">
+        <p>@Daniels Yautibug | Todos los derechos reservados</p>
+
+    </footer>
     
     <script src="build/js/app.js"></script>
 

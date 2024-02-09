@@ -5,6 +5,8 @@
 html{
     font-size: 62.5%;
     box-sizing: border-box;
+
+    scroll-behavior: smooth;
 }
 
 *,
@@ -19,6 +21,10 @@ body{
 
     &.fijar-body{
         overflow: hidden; //BLOQUEA EL SCROL DEL BODY
+    }
+
+    &.body-scroll{
+        padding-top: 80px;
     }
 }
 
