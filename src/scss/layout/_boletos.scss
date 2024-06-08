@@ -3,10 +3,12 @@
 
 .boletos{
     padding: 5rem 0;
+    background-color: #00dade8c;
+    background-image: linear-gradient(282deg, #00dadec1 0%, #ef11f3d0 100%);
 
     h3{
         text-align: center;
-        color: var.$blanco;
+        color: var.$color_bg1;
         margin-bottom: 1rem;
     }
 
@@ -19,9 +21,16 @@
 
 .pase{
 
+    .pase-contenedor{
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
     .nombre-pase{
         text-align: center;
-        color: var.$blanco;
+        color: var.$color_bg3;
         font-size: 2.5rem;
         font-weight: 700;
     }
@@ -39,25 +48,28 @@
 
     //.pase-header{ //DECLARAR METODO 1
         &-header{   //DECLARAR METODO 2
-            background-color: var.$rosa;
+            background-color: var.$color_bg4;
             p{
                 text-transform: uppercase;
                 font-size: 1.6rem;
+                font-weight: 600;
             }
     }
 
     //.pase-body{  //DECLARAR METODO 1
         &-body{    //DECLARAR METODO 2
-            background-color: var.$blanco;
+            background-color: var.$color_bg5;
 
             ul{
+                
                 @include mix.reset_list;
 
                 li,
                 :nth-child(odd){
-                    background-color: var.$blanco;
+                    background-color: rgba(51, 50, 75, 0.173);
                     padding: 2rem;
-                    border-bottom: 1px solid #e1e1e1
+                    border-bottom: 1px solid #3293de;
+                    color: rgb(255, 255, 255);
                 };
             }
 
@@ -65,7 +77,7 @@
 
     //.pase-footer{  //DECLARAR METODO 1
         &-footer{    //DECLARAR METODO 2
-            background-color: var.$morado;
+            background-color: var.$color_bg1;
             p{
                 font-size: 2.6rem;
                 font-weight: 700;

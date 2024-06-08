@@ -1,18 +1,17 @@
-@use 'base/variables' as var;
+@use 'base/variables' as va;
 @use 'base/mixins' as mix;
 
 .festival{
-    display: flex;
-    justify-content: center;
-}
-
-.sobre-festival{
-
     padding: 5rem 0;
 
     @include mix.tablet{
         @include mix.grid(2, 5rem);
     }
+}
+
+.festival-imagen{
+    display: flex;
+    place-items: center;
 }
 
 .contenido-festival{
@@ -27,10 +26,22 @@
 
     h2{
         margin-bottom: 2rem;
+        color: va.$color_bg1;
+        text-align: center;
+
+        @include mix.telefono{
+            text-align: center;
+        }
+        @include mix.tablet{
+            text-align: left;
+        }
+        @include mix.pc{
+            text-align: left;
+        }
     }
 
     .fecha{
-        color: var.$rosa;
+        color: va.$color_bg2;
         font-weight: 700;
     }
 

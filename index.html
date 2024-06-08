@@ -9,15 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
 
-    <link rel="preload" href="/build/css/app.css" as="style"> 
-    <link rel="stylesheet" href="/build/css/app.css">
+    <link rel="preload" href="/PaguinaWeb_Proyecto_4/build/css/app.css" as="style"> 
+    <link rel="stylesheet" href="/PaguinaWeb_Proyecto_4/build/css/app.css">
 
 </head>
 <body>
 
     <header class="header">
-        <div class="contenedor contenido-header">
-            <h1>Music Festival - Ecuador</h1>
+        <div class="contenido-header contenedor ">
+            <h1>Festival Ecuador</h1>
             <nav class="navegacion-principal">
                 <a href="#lineUp">Line Up</a> <!--Metodo 1  -->
                 <a href="#galeria">Galería</a> <!--Metodo 2 -->
@@ -29,8 +29,11 @@
     <div class="video">
         <div class="overlay">
             <div class="contenedor contenido-video">
-                <h2>Concierto Daniels | DX</h2>
-                <p>enero 2029, Guamote, Ecuador</p>
+                <h2>Music Festival | Ecuador</h2>
+                <div class="video-info">
+                    <p>Enero 2050, Ecuador</p>
+                </div>
+                
             </div>
         </div>
         <video autoplay muted loop>
@@ -40,20 +43,17 @@
         </video>
     </div>
 
-    <section class="festival">
-        <div class="contenedor sobre-festival">
-            <div class="imagen">
-                <picture>
-                    <source srcset="/build/img/imagen_vocalista.avif" type="image/avif">
-                    <source srcset="/build/img/imagen_vocalista.webp" type="image/webp">
-                    <img  loading="lazy" width="200" height="300" src="/build/img/imagen_vocalista.jpg" alt="Imagen Vocalista">
-                </picture>
-            </div>
-            <div class="contenido-festival">
-                <h2>Performance Concert</h2>
-                <p class="fecha">14 de enero del 2050, Guamote Ecuador</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, eveniet pariatur. Iusto esse ipsa nisi iure, velit corrupti recusandae accusamus veniam. Quos maxime nisi labore asperiores fugiat optio, alias praesentium.Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
-            </div>
+    <section class="contenedor festival sobre-festival">
+        <div class="festival-imagen">
+            <picture>
+                <source srcset="/build/img/imagen_vocalista.webp" type="image/webp">
+                <img  loading="lazy" width="200" height="300" src="/build/img/imagen_vocalista.jpg" alt="Imagen Vocalista">
+            </picture>
+        </div>
+        <div class="contenido-festival">
+            <h2>Performance Concert</h2>
+            <p class="fecha">14 de enero del 2050, Ecuador</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, eveniet pariatur. Iusto esse ipsa nisi iure, velit corrupti recusandae accusamus veniam. Quos maxime nisi labore asperiores fugiat optio, alias praesentium.Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
         </div>
     </section>
 
@@ -173,58 +173,60 @@
     </section>
 
 
-    <Section id="boletos" class="boletos bg-verde">
+    <Section id="boletos" class="boletos">
         <h3>Boletos</h3>
 
         <div class="contenedor contenedor-boletos">
-            <div class="basico pase">
-                <p class="nombre-pase">Pase 1 Dia</p>
-                <header class="pase-header">
-                    <p>Incluye</p>
-                </header>
-                <div class="pase-body">
-                    <ul>
-                        <li>Acceso a ambos escenarios</li>
-                        <li>Comida y bebidas</li>
-                        <li>Bebidas gratis</li>
-                        <li>Mochila gratis</li>
-                    </ul>
+            <div class="pase">
+                <p class="nombre-pase">Pase: 1 Dia</p>
+                <div class="pase-contenedor">
+                    <header class="pase-header">
+                        <p>Incluye</p>
+                    </header>
+                    <div class="pase-body">
+                        <ul>
+                            <li>Acceso a ambos escenarios</li>
+                            <li>Comida y bebidas</li>
+                            <li>Bebidas gratis</li>
+                            <li>Mochila gratis</li>
+                        </ul>
+                    </div>
+                    <footer class="pase-footer">
+                        <p>$100</p>
+                    </footer>
                 </div>
-                <footer class="pase-footer">
-                    <p>$100</p>
-                </footer>
             </div>
             
         
 
-            <div class="premium pase">
-                <p class="nombre-pase">Pase 2 Dias</p>
-
-                <header class="pase-header">
-                    <p>Incluye</p>
-                </header>
-                <div class="pase-body">
-                    <ul>
-                        <li>Acceso a ambos escenarios</li>
-                        <li>Comida y bebidas</li>
-                        <li>Hospedaje Gratis</li>
-                        <li>Acceso Vip</li>
-                    </ul>
+            <div class="pase">
+                <p class="nombre-pase">Pase: 2 Dias</p>
+                <div class="pase-contenedor">
+                    <header class="pase-header">
+                        <p>Incluye</p>
+                    </header>
+                    <div class="pase-body">
+                        <ul>
+                            <li>Acceso a ambos escenarios</li>
+                            <li>Comida y bebidas</li>
+                            <li>Hospedaje Gratis</li>
+                            <li>Acceso Vip</li>
+                        </ul>
+                    </div>
+                    <footer class="pase-footer">
+                        <p>$100</p>
+                    </footer>
                 </div>
-                <footer class="pase-footer">
-                    <p>$100</p>
-                </footer>
             </div>
 
         </div>
     </Section>
 
-    <footer class="site-footer">
-        <p>@Daniels Yautibug | Todos los derechos reservados</p>
-
+    <footer class="footer-container-2">
+        <div id="app"></div>
     </footer>
-    
-    <script src="build/js/app.js"></script>
+
+    <script src="/PaguinaWeb_Proyecto_4/build/js/app.js"></script>
 
 </body>
 </html>

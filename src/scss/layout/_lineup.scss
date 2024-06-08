@@ -1,13 +1,16 @@
-@use 'base/variables' as var;
+@use 'base/variables' as va;
 @use 'base/mixins' as mix;
 
 .lineup{
     padding: 5rem 0;
-    background-color: var.$rosa;
+    background-color: #00dade8c;
+    background-image: linear-gradient(282deg, #00dadec1 0%, #ef11f3d0 100%);
+
 
     h3, p{
         text-align: center;
-        color: var.$blanco;
+        color: va.$color_bg1;
+        font-size: 3rem;
     }
     .dia{
         text-transform: uppercase;
@@ -23,7 +26,8 @@
     }
 
     p{
-        color: var.$negro;
+        color: va.$color_bg1;
+        font-weight: 600;
     }
 }
 
@@ -53,10 +57,12 @@
 
 .rock .nomre-escenario:after{
     background-image: url(../img/icono_rock.png);
+    filter: invert(100%) brightness(200%);
 }
 
 .edm .nomre-escenario:after{
     background-image: url(../img/icono_edm.png);
+    filter: invert(100%) brightness(200%);
 }
 
 .calendario{
@@ -65,6 +71,7 @@
     li{
         padding: 2.5rem;
         font-weight: 700;
+        color: rgb(194, 200, 227);
 
         span{
             font-weight: 400;
@@ -74,17 +81,17 @@
 
 
 .bg-amarillo{
-    background-color: var.$amarillo;
+    background-color: rgba(23, 72, 249, 0.405);
 
     li:nth-child(odd){ //ELIGE ALTERNADO--
-        background-color: darken(var.$amarillo, 25%);
+        background-color: rgba(0, 4, 255, 0.405)
     }
 }
 
 .bg-verde{
-    background-color: var.$verde;
+    background-color: va.$color_bg5;
 
     li:nth-child(odd){ //ELIGE ALTERNADO--
-        background-color: darken(var.$verde, 10%);
+        background-color: rgba(11, 16, 27, 0.405)
     }
 }

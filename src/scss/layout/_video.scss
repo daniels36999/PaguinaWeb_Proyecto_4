@@ -6,11 +6,11 @@
     max-height: 70rem;
     min-height: 50rem;
     overflow: hidden;
-
     .overlay{
         position: absolute;
-        background: rgb(99,0,144);
-        background: linear-gradient(83deg, rgba(99,0,144,0.8) 0%, rgba(255,30,205,0.1) 100%);
+        background-color: #00dade57;
+        background-image: linear-gradient(90deg, #00dadea2 0%, #fb00ff92 100%);
+
         height: 100%;
         width: 100%;
         display: flex;
@@ -29,23 +29,55 @@
 }
 
 .contenido-video{
-
+    display: flex;
+    flex-direction: column;
     z-index: 10;// para ordenar los objetos
     
     h2{
-        color: var.$blanco;
-        font-size: 7rem;
-        margin: 0;
+        color: var.$color_bg1;
+        font-size: 6rem;
+        margin: 3rem 0;
+        text-align: center;
+
+        @include mix.telefono{
+            text-align: center;
+        }
+        @include mix.tablet{
+            text-align: left;
+        }
+        @include mix.pc{
+            text-align: left;
+        }
     }
 
-    p{
-        background-color: var.$rosa;
-        display: inline-block;
-        padding: 1rem 2rem;
-        color: var.$blanco;
-        font-weight: 700;
-        font-size: 3rem;
-        margin: 0;
+    .video-info{
+        display: flex;
+        justify-content: center;
+
+        @include mix.telefono{
+            justify-content: center;
+        }
+        @include mix.tablet{
+            justify-content: left;
+        }
+        @include mix.pc{
+            justify-content: left;
+        }
+
+        p{
+            background-color: var.$color_bg2;
+            display: inline-block;
+            border-radius: 20px;
+            padding: 1rem 2rem;
+            color: var.$blanco;
+            font-weight: 700;
+            font-size: 3rem;
+            margin: 0;
+    
+    
+        }
     }
+
+
 
 }

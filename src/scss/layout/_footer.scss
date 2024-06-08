@@ -1,13 +1,30 @@
 @use 'base/variables' as var;
 
-.site-footer{
-    background-color: var.$rosa;
-    padding: 1rem;
+/* PIE DE PAGINA */
+.footer-container-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6vw 3vw ;
+    min-height: 6rem;
+    background-color: black;
 
-    p{
-        margin: 0;
-        color: var.$blanco;
-        text-align: center;
-        font-weight: 400;
-    }
+}
+
+.footer-container-2 button{
+    background-color: transparent;
+    padding: 0; 
+    margin: 0;
+    border: none;
+    color: var.$color_bg2;
+}
+
+.footer-container-2 button:hover{
+    cursor: pointer;
+}
+
+.footer-container-2 p{
+    font-family: var(fuente_hack);
+    text-align: center;
+    color: #ffffff;
 }
