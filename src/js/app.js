@@ -58,8 +58,8 @@ function crearGaleria(){
         const imagen = document.createElement('picture');
 
         imagen.innerHTML =`
-        <source srcset="/build/img/thumb/${i}.webp" type="image/webp">
-        <img  loading="lazy" width="200" height="300" src="/build/img/thumb/${i}.jpg" alt="Imagen Galería">
+        <source srcset="/PaguinaWeb_Proyecto_4/build/img/thumb/${i}.webp" type="image/webp">
+        <img  loading="lazy" width="200" height="300" src="/PaguinaWeb_Proyecto_4/build/img/thumb/${i}.jpg" alt="Imagen Galería">
         `;
         imagen.onclick = function(){ //EScucha la accion al precionar y es callback para q no se ejecute todo
             mostrarImagen(i)
@@ -75,8 +75,8 @@ function mostrarImagen(imgPresiona){
     const imagen = document.createElement('picture');
 
     imagen.innerHTML =`
-        <source srcset="/build/img/grande/${imgPresiona}.webp" type="image/webp">
-        <img  loading="lazy" width="200" height="300" src="/build/img/grande/${imgPresiona}.jpg" alt="Imagen Galería">
+        <source srcset="/PaguinaWeb_Proyecto_4/build/img/grande/${imgPresiona}.webp" type="image/webp">
+        <img  loading="lazy" width="200" height="300" src="/PaguinaWeb_Proyecto_4/build/img/grande/${imgPresiona}.jpg" alt="Imagen Galería">
         `;
 
     //CREA EL OVERLAY CON LA IMAGEN
